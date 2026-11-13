@@ -118,13 +118,13 @@ $messages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassWall - Message Board</title>
+    <title>LexiCon - Message Board</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>ClassWall</h1>
+    <h1>LexiCon</h1>
 
     <p>Welcome to our community message board!</p>
 
@@ -150,7 +150,7 @@ $messages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <form method="POST" action="index.php">
 
-        <label for="author">Your Name:</label>
+        <label for="author">Lex Bonotan</label>
         <br>
 
         <input
