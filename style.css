@@ -1,0 +1,255 @@
+
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background:
+            radial-gradient(circle at top left, #24344b, transparent 45%),
+            #101722;
+        color: #e9e5dc;
+        min-height: 100vh;
+        padding: 50px 20px;
+        line-height: 1.7;
+    }
+
+    /* MAIN TITLE */
+
+    body > h1 {
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: 46px;
+        letter-spacing: 3px;
+        color: #e5c17b;
+        margin-bottom: 5px;
+    }
+
+    body > p:first-of-type {
+        text-align: center;
+        color: #aeb8c5;
+        margin-bottom: 30px;
+    }
+
+    /* SESSION COUNTER */
+
+    body > p:nth-of-type(2) {
+        text-align: center;
+        color: #d6b875;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* SECTION HEADINGS */
+
+    h2 {
+        font-family: Georgia, serif;
+        color: #e5c17b;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    /* DIVIDERS */
+
+    hr {
+        border: none;
+        border-top: 1px solid #344153;
+        margin: 35px auto;
+        max-width: 750px;
+    }
+
+    /* FORMS */
+
+    form {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 30px;
+        background: rgba(30, 42, 58, 0.88);
+        border: 1px solid #39495e;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+        color: #d9d4ca;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 14px 16px;
+        margin-top: 8px;
+        background: #141e2b;
+        border: 1px solid #45566d;
+        border-radius: 9px;
+        color: #f2eee6;
+        font-family: inherit;
+        font-size: 15px;
+        outline: none;
+        transition: 0.25s ease;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+        border-color: #d6b875;
+        box-shadow: 0 0 0 3px rgba(214, 184, 117, 0.12);
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #7f8b9b;
+    }
+
+    /* CHECKBOX */
+
+    input[type="checkbox"] {
+        accent-color: #d6b875;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 7px;
+    }
+
+    /* BUTTONS */
+
+    button {
+        background: linear-gradient(135deg, #d9bb7c, #b58c4b);
+        color: #17202c;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.25s ease;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(214, 184, 117, 0.2);
+        background: #edcf91;
+    }
+
+    /* SEARCH FORM */
+
+    form:has(input[name="search"]) {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    form:has(input[name="search"]) input[type="text"] {
+        margin: 0;
+        flex: 1;
+        min-width: 0;
+    }
+
+    a {
+        color: #d6b875;
+        text-decoration: none;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    a:hover {
+        color: #f5dda9;
+        text-decoration: underline;
+    }
+
+    /* SUCCESS AND ERROR MESSAGES */
+
+    body > p:has(+ form) {
+        color: #e5c17b;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* MESSAGE CARDS */
+
+    body > div {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 22px 25px;
+        background: #1e2a3a;
+        border: 1px solid #35465b;
+        border-left: 4px solid #c6a567;
+        border-radius: 10px;
+        transition: 0.25s ease;
+    }
+
+    body > div:hover {
+        transform: translateY(-3px);
+        border-color: #b99b62;
+        background: #243247;
+    }
+
+    body > div h3 {
+        color: #e5c17b;
+        font-family: Georgia, serif;
+        font-size: 19px;
+        margin-bottom: 8px;
+    }
+
+    body > div p {
+        color: #d3d8df;
+        overflow-wrap: anywhere;
+        white-space: normal;
+    }
+
+    body > div small {
+        display: block;
+        color: #8998aa;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    /* EMPTY SEARCH RESULTS */
+
+    body > p:last-of-type {
+        text-align: center;
+        color: #aeb8c5;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 600px) {
+
+        body {
+            padding: 30px 15px;
+        }
+
+        body > h1 {
+            font-size: 35px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        form:has(input[name="search"]) {
+            flex-wrap: wrap;
+        }
+
+        form:has(input[name="search"]) button {
+            flex: 1;
+        }
+
+        body > div {
+            padding: 18px;
+        }
+    }
+
